@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="O2N-ew-AMs">
+                                <rect key="frame" x="0.0" y="875" width="430" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Good" style="plain" id="qYq-ve-d1n">
+                                        <connections>
+                                            <action selector="switchView:" destination="BYZ-38-t0r" id="IxK-ut-vT3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="1" title="Dad" width="306" id="xoa-99-bNT">
+                                        <connections>
+                                            <action selector="switchView:" destination="BYZ-38-t0r" id="CZE-sc-iMI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="2" title="Pun" id="cWN-wg-IvE">
+                                        <connections>
+                                            <action selector="switchView:" destination="BYZ-38-t0r" id="MP4-v9-ES0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O2N-ew-AMs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3KX-t0-tEr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O2N-ew-AMs" secondAttribute="bottom" constant="20" id="8An-v4-QKj"/>
+                            <constraint firstItem="O2N-ew-AMs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bcf-Fm-dJ3"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.3720930232558146" y="-1562.4463519313306"/>
+        </scene>
+        <!--Good Joke View Controller Scene-->
+        <scene sceneID="avK-hK-CqE">
+            <objects>
+                <viewController storyboardIdentifier="good_joke" title="Good Joke View Controller Scene" id="7Jp-Hj-D6Q" customClass="GoodJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lRK-i2-zDa">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-h7-9tO">
+                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="switchViews:" destination="7Jp-Hj-D6Q" eventType="touchUpInside" id="PLl-Sj-3hn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="URE-AV-Zli"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="URE-AV-Zli" firstAttribute="trailing" secondItem="ylO-h7-9tO" secondAttribute="trailing" constant="25" id="U6h-Yc-POv"/>
+                            <constraint firstItem="URE-AV-Zli" firstAttribute="bottom" secondItem="ylO-h7-9tO" secondAttribute="bottom" constant="60" id="sDH-ik-dRU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cU7-OA-jex"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhg-t1-vPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="-731"/>
+        </scene>
+        <!--Pun Joke View Controller View-->
+        <scene sceneID="e3W-Ff-Q8H">
+            <objects>
+                <viewController storyboardIdentifier="pun_joke" title="Pun Joke View Controller View" id="l59-2I-tJP" customClass="PunJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fkx-l2-jbc">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-wN-fhP">
+                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="switchViews:" destination="l59-2I-tJP" eventType="touchUpInside" id="0hR-El-m8r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yXj-Pj-aGd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="trailing" secondItem="xys-wN-fhP" secondAttribute="trailing" constant="25" id="A4v-VB-7sC"/>
+                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="bottom" secondItem="xys-wN-fhP" secondAttribute="bottom" constant="60" id="ho7-D5-a8S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Y1-qL-ygq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AX7-LQ-YR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231" y="-1562"/>
+        </scene>
+        <!--Dad Joke View Controller View-->
+        <scene sceneID="bwa-tD-y1c">
+            <objects>
+                <viewController storyboardIdentifier="dad_joke" title="Dad Joke View Controller View" id="dW7-Jg-nK0" customClass="DadJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a7u-5r-vQx">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QW-vR-cUL">
+                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="switchViews:" destination="dW7-Jg-nK0" eventType="touchUpInside" id="wUJ-nS-Aft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f0g-mI-8am"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f0g-mI-8am" firstAttribute="trailing" secondItem="3QW-vR-cUL" secondAttribute="trailing" constant="25" id="SGu-Nc-Hdq"/>
+                            <constraint firstItem="f0g-mI-8am" firstAttribute="bottom" secondItem="3QW-vR-cUL" secondAttribute="bottom" constant="60" id="eBm-Lt-yVy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XfP-cT-3LV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xF-CW-iiv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230.6976744186047" y="-841.41630901287556"/>
+        </scene>
+        <!--Display Joke View Controller-->
+        <scene sceneID="Jgn-Tx-I7U">
+            <objects>
+                <viewController storyboardIdentifier="display_joke" title="Display Joke View Controller" id="Qiy-qe-rem" customClass="DisplayJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKa-R0-EAk">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJz-Z1-6ga">
+                                <rect key="frame" x="215" y="466" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xse-dQ-0e5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RJz-Z1-6ga" firstAttribute="centerX" secondItem="jKa-R0-EAk" secondAttribute="centerX" id="UmH-3g-gvJ"/>
+                            <constraint firstItem="RJz-Z1-6ga" firstAttribute="centerY" secondItem="jKa-R0-EAk" secondAttribute="centerY" id="f2V-zI-S4M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="punchline" destination="RJz-Z1-6ga" id="KyN-NJ-sUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0b8-hP-4TP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="75"/>
+        </scene>
+        <!--Display Joke View Controller-->
+        <scene sceneID="ca8-uu-fza">
+            <objects>
+                <viewController storyboardIdentifier="display_question" id="4ou-kC-kdG" customClass="DisplayJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RdA-pY-IXI">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6Z-OQ-ACa">
+                                <rect key="frame" x="215" y="466" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MgW-k2-Hwp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U6Z-OQ-ACa" firstAttribute="centerX" secondItem="RdA-pY-IXI" secondAttribute="centerX" id="88D-6f-p2w"/>
+                            <constraint firstItem="U6Z-OQ-ACa" firstAttribute="centerY" secondItem="RdA-pY-IXI" secondAttribute="centerY" id="VjS-GN-Ynw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="punchline" destination="U6Z-OQ-ACa" id="iWm-pz-CRs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdz-tl-1no" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355.81395348837208" y="74.678111587982841"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
