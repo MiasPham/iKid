@@ -32,7 +32,7 @@ class GoodJokeViewController: UIViewController {
                 ], animations: {
                     self.jokeView.view.frame = self.view.frame
                 })
-                self.jokeView.displayJoke(joke: "Good answer")
+                self.jokeView.displayJoke(joke: "She kept running away from the ball.")
                 sender.setTitle("Back", for: .normal)
                 switchViewController(questionView, to: jokeView)
             } else {
@@ -80,8 +80,7 @@ class GoodJokeViewController: UIViewController {
         if (btn != nil) {
             btn.setTitle("Next", for: .normal)
         }
-        
-        questionView.displayJoke(joke: "Good")
+        questionView.displayJoke(joke: "Why was Cinderalla so bad at soccer?")
     }
 
 }

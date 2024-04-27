@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,38 +12,49 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="O2N-ew-AMs">
-                                <rect key="frame" x="0.0" y="875" width="430" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Good" style="plain" id="qYq-ve-d1n">
-                                        <connections>
-                                            <action selector="switchView:" destination="BYZ-38-t0r" id="IxK-ut-vT3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem tag="1" title="Dad" width="306" id="xoa-99-bNT">
-                                        <connections>
-                                            <action selector="switchView:" destination="BYZ-38-t0r" id="CZE-sc-iMI"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem tag="2" title="Pun" id="cWN-wg-IvE">
-                                        <connections>
-                                            <action selector="switchView:" destination="BYZ-38-t0r" id="MP4-v9-ES0"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5m-b2-d6t">
+                                <rect key="frame" x="1" y="795" width="393" height="52"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="O2N-ew-AMs">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Good" style="plain" id="qYq-ve-d1n">
+                                                <connections>
+                                                    <action selector="switchView:" destination="BYZ-38-t0r" id="IxK-ut-vT3"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="zE7-3s-7uG"/>
+                                            <barButtonItem tag="1" title="Dad" id="xoa-99-bNT">
+                                                <connections>
+                                                    <action selector="switchView:" destination="BYZ-38-t0r" id="CZE-sc-iMI"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="eaX-2J-mkg"/>
+                                            <barButtonItem tag="2" title="Pun" id="cWN-wg-IvE">
+                                                <connections>
+                                                    <action selector="switchView:" destination="BYZ-38-t0r" id="MP4-v9-ES0"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="lAE-6g-p4g"/>
+                                    <constraint firstAttribute="height" constant="52" id="tnE-KC-oJh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="O2N-ew-AMs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3KX-t0-tEr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O2N-ew-AMs" secondAttribute="bottom" constant="20" id="8An-v4-QKj"/>
-                            <constraint firstItem="O2N-ew-AMs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bcf-Fm-dJ3"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5m-b2-d6t" secondAttribute="trailing" constant="1" id="Aso-Nc-Wex"/>
+                            <constraint firstItem="Q5m-b2-d6t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1" id="WWT-gT-78Y"/>
+                            <constraint firstAttribute="bottom" secondItem="Q5m-b2-d6t" secondAttribute="bottom" constant="5" id="WjC-to-OCh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -51,18 +62,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8.3720930232558146" y="-1562.4463519313306"/>
+            <point key="canvasLocation" x="-8.3969465648854964" y="-1562.6760563380283"/>
         </scene>
         <!--Good Joke View Controller Scene-->
         <scene sceneID="avK-hK-CqE">
             <objects>
                 <viewController storyboardIdentifier="good_joke" title="Good Joke View Controller Scene" id="7Jp-Hj-D6Q" customClass="GoodJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lRK-i2-zDa">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-h7-9tO">
-                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <rect key="frame" x="308" y="719" width="60" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
@@ -81,18 +92,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhg-t1-vPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="-731"/>
+            <point key="canvasLocation" x="-8" y="-842"/>
         </scene>
         <!--Pun Joke View Controller View-->
         <scene sceneID="e3W-Ff-Q8H">
             <objects>
                 <viewController storyboardIdentifier="pun_joke" title="Pun Joke View Controller View" id="l59-2I-tJP" customClass="PunJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fkx-l2-jbc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-wN-fhP">
-                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <rect key="frame" x="308" y="709" width="60" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
@@ -104,25 +115,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yXj-Pj-aGd" firstAttribute="trailing" secondItem="xys-wN-fhP" secondAttribute="trailing" constant="25" id="A4v-VB-7sC"/>
-                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="bottom" secondItem="xys-wN-fhP" secondAttribute="bottom" constant="60" id="ho7-D5-a8S"/>
+                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="bottom" secondItem="xys-wN-fhP" secondAttribute="bottom" constant="70" id="ho7-D5-a8S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Y1-qL-ygq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX7-LQ-YR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="-1562"/>
+            <point key="canvasLocation" x="954" y="-1562"/>
         </scene>
         <!--Dad Joke View Controller View-->
         <scene sceneID="bwa-tD-y1c">
             <objects>
                 <viewController storyboardIdentifier="dad_joke" title="Dad Joke View Controller View" id="dW7-Jg-nK0" customClass="DadJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7u-5r-vQx">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QW-vR-cUL">
-                                <rect key="frame" x="345" y="799" width="60" height="39"/>
+                                <rect key="frame" x="308" y="719" width="60" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
@@ -141,18 +152,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xF-CW-iiv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230.6976744186047" y="-841.41630901287556"/>
+            <point key="canvasLocation" x="953" y="-842"/>
         </scene>
         <!--Display Joke View Controller-->
         <scene sceneID="Jgn-Tx-I7U">
             <objects>
                 <viewController storyboardIdentifier="display_joke" title="Display Joke View Controller" id="Qiy-qe-rem" customClass="DisplayJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jKa-R0-EAk">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJz-Z1-6ga">
-                                <rect key="frame" x="215" y="466" width="0.0" height="0.0"/>
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,11 +189,11 @@
             <objects>
                 <viewController storyboardIdentifier="display_question" id="4ou-kC-kdG" customClass="DisplayJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RdA-pY-IXI">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6Z-OQ-ACa">
-                                <rect key="frame" x="215" y="466" width="0.0" height="0.0"/>
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
