@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-wN-fhP">
-                                <rect key="frame" x="308" y="709" width="60" height="39"/>
+                                <rect key="frame" x="308" y="719" width="60" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Next"/>
                                 <connections>
@@ -115,7 +115,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yXj-Pj-aGd" firstAttribute="trailing" secondItem="xys-wN-fhP" secondAttribute="trailing" constant="25" id="A4v-VB-7sC"/>
-                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="bottom" secondItem="xys-wN-fhP" secondAttribute="bottom" constant="70" id="ho7-D5-a8S"/>
+                            <constraint firstItem="yXj-Pj-aGd" firstAttribute="bottom" secondItem="xys-wN-fhP" secondAttribute="bottom" constant="60" id="ho7-D5-a8S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Y1-qL-ygq"/>

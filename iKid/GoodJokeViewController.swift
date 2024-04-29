@@ -12,6 +12,10 @@ class GoodJokeViewController: UIViewController {
     var jokeView : DisplayJokeViewController!
     var questionView : DisplayJokeViewController!
     var btn: UIButton!
+    var answers = ["Knock knock", "Atch", "Bless you!"]
+    var questions = ["Who's there?", "Atch who?"]
+    var answer_idx = 0
+    var question_idx = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,7 @@ class GoodJokeViewController: UIViewController {
         // Do any additional setup after loading the view.
         jokeView = instantiate(id: "display_joke")
         questionView = instantiate(id: "display_question")
-        switchViewController(nil, to: questionView)
+        switchViewController(nil, to: jokeView)
     }
     
     @IBAction func switchViews(_ sender: UIButton) {
@@ -32,8 +36,9 @@ class GoodJokeViewController: UIViewController {
                 ], animations: {
                     self.jokeView.view.frame = self.view.frame
                 })
-                self.jokeView.displayJoke(joke: "She kept running away from the ball.")
-                sender.setTitle("Back", for: .normal)
+                self.jokeView.displayJoke(joke: answers[answer_idx])
+                answer_idx = (answer_idx + 1) % answers.count
+                sender.setTitle("Next", for: .normal)
                 switchViewController(questionView, to: jokeView)
             } else {
                 UIView.transition(with: view, duration: 0.4, options: [
@@ -41,6 +46,8 @@ class GoodJokeViewController: UIViewController {
                 ], animations: {
                     self.questionView.view.frame = self.view.frame
                 })
+                self.questionView.displayJoke(joke: questions[question_idx])
+                question_idx = (question_idx + 1) % questions.count
                 sender.setTitle("Next", for: .normal)
                 switchViewController(jokeView, to: questionView)
             }
@@ -72,15 +79,18 @@ class GoodJokeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if self.jokeView != nil &&
-            self.jokeView.view.superview != nil {
-            switchViewController(jokeView, to: questionView)
+        if self.questionView != nil &&
+            self.questionView.view.superview != nil {
+            switchViewController(questionView, to: jokeView)
         }
         
-        if (btn != nil) {
-            btn.setTitle("Next", for: .normal)
-        }
-        questionView.displayJoke(joke: "Why was Cinderalla so bad at soccer?")
+//        if (btn != nil) {
+//            btn.setTitle("Next", for: .normal)
+//        }
+        answer_idx = 0
+        question_idx = 0
+        jokeView.displayJoke(joke: answers[answer_idx])
+        answer_idx = 1
     }
 
 }
